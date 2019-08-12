@@ -29,13 +29,13 @@ The "l/N" allows you to sample your function on the interval [0,1] sampled unifo
 
 # Adding a DAC to the project
 
-The following code is to put the output of our module into an 8-bit DAC. A simple DAC can be constructed out of a resistor ladder connected to 8-pins of the FPGA. 
+The following code is to put the output of our module into an 8-bit DAC. A simple DAC can be constructed out of a resistor ladder connected to 8-pins of the FPGA. In your Top module you will need to add "output [0:7] DAC". Which will make the 8-pins an output for your FPGA. I've added my .utc file for alocating those 8 pins to the DAC. The following code is just an example instance for adding the module to your top-module. 
 
 wire [7:0] DAC_q;
 
 assign DAC = DAC_q;
 
-Signal_ROM const (
+Signal_ROM Signal (
 
   .clk(clk),
   
