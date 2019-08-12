@@ -6,8 +6,11 @@ The important bit of code for changing which signal the signal generator is usin
 signal_q <= Signal [n][addr];
 
 right now:
+
 n=0 is a sine wave;
+
 n=1 is a hyperbolic tangent wave;
+
 n=2 is an arctangent wave.
 
 The period or time it takes for the signal to repeat itself can be calculated via 1/(Clock Speed/Samples)
